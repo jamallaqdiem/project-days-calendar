@@ -10,13 +10,13 @@
 
 <body>
     <main>
-        <section>
-            <button id="prev-btn">Previous</button>
-            <h2 id="month-year-display"></h2>
-            <button id="next-btn">Next</button>
+        <section id="navigation">
+            <div class="nav-container"> <button id="prev-btn">Previous</button>
+                <h2 id="month-year-display"></h2> <button id="next-btn">Next</button>
+            </div>
         </section>
 
-        <section>
+        <section id="selectors">
             <label for="month-select">Month:</label>
             <select id="month-select">
                 <option value="0">January</option>
@@ -34,9 +34,7 @@
             </select>
 
             <label for="year-select">Year:</label>
-            <select id="year-select">
-                <!--javascript-->
-            </select>
+            <select id="year-select"></select>
         </section>
 
         <section id="weekday-labels">
@@ -49,14 +47,19 @@
             <div>Sat</div>
         </section>
 
-        <section id="calendar-grid">
-            <!--javascript-->
-        </section>
-
+        <section id="calendar-grid"></section>
     </main>
 
-    <script type="module" src=""></script>
+    <!-- Modal -->
+    <div id="special-day-modal" class="modal">
+        <div class="modal-content">
+            <h3></h3>
+            <p></p>
+            <button class="close-btn">Close</button>
+        </div>
+    </div>
 
+    <script type="module" src="web.mjs"></script>
 </body>
 
 </html>
