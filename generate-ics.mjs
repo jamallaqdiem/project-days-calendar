@@ -68,4 +68,3 @@ const icsContent = [
 
 // ---------------- WRITE TO FILE ----------------
 fs.writeFileSync("./days.ics", icsContent);
-console.log("✅ days.ics created! You can now import it into Google Calendar.");
