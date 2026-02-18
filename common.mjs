@@ -1,6 +1,6 @@
 
 // Helper function that calculate the Nth of a week day in a month.
-function getNthWeekday(year, month, dayOfWeek, n) {
+export function getNthWeekday(year, month, dayOfWeek, n) {
   const firstDay = new Date(year, month, 1, 12, 0, 0);
 
   let differenceDay = dayOfWeek - firstDay.getDay();
