@@ -1,6 +1,7 @@
 import fs from "fs";
 import { getCommemorativeDate } from "./common.mjs";
 
+// Maps for month, day, and occurrence
 const monthMap = {
   January: 0,
   February: 1,
@@ -47,6 +48,7 @@ const events = daysData.flatMap((day) => {
     const d = String(date.getDate()).padStart(2, "0");
     const formatted = `${y}${m}${d}`;
 
+    // Each event is a WHOLE DAY event
     return `
 BEGIN:VEVENT
 SUMMARY:${day.name}
