@@ -103,6 +103,11 @@ function generateCalendar() {
   const firstDay = new Date(currentYear, currentMonth, 1).getDay();
   const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
 
+  // Removing empty row
+  const totalCells = firstDay + daysInMonth;
+  const neededRows = Math.ceil(totalCells / 7);
+  const cellsToRender = neededRows * 7;
+
   // Precompute special days
   const specialsThisMonth = {};
   specialDays.forEach((s) => {
@@ -116,7 +121,7 @@ function generateCalendar() {
   });
 
   let dayCounter = 1;
-  for (let i = 0; i < 42; i++) {
+  for (let i = 0; i < cellsToRender; i++) {
     const cell = document.createElement("div");
     cell.classList.add("day");
 
