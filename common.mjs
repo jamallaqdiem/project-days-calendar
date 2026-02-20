@@ -1,6 +1,5 @@
-
 // Helper function that calculate the Nth of a week day in a month.
-export function getNthWeekday(year, month, dayOfWeek, n) {
+function getNthWeekday(year, month, dayOfWeek, n) {
   const firstDay = new Date(year, month, 1, 12, 0, 0);
 
   let differenceDay = dayOfWeek - firstDay.getDay();
@@ -29,9 +28,11 @@ function getLastWeekday(year, month, dayOfWeek) {
 }
 
 // main function that use n to decide which helper function to use based on the n.
-export function getCommemorativeDate(year, month, dayOfWeek, n) {
+function getCommemorativeDate(year, month, dayOfWeek, n) {
   if (n === -1) {
     return getLastWeekday(year, month, dayOfWeek);
   }
   return getNthWeekday(year, month, dayOfWeek, n);
 }
+
+export { getNthWeekday, getLastWeekday, getCommemorativeDate };
