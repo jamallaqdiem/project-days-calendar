@@ -16,88 +16,31 @@ section {
   margin-bottom: 15px;
 }
 
-/* ---------------- NAVIGATION + SELECTORS ---------------- */
-.nav-container {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  margin-bottom: 10px;
-  gap: 10px;
-}
-
-#prev-btn,
-#next-btn {
-  width: 100%;
-  padding: 5px 0;
-  font-size: 1em;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-.nav-container h2 {
-  margin: 0;
-  text-align: center;
-}
 /* ---------------- NAVIGATION ---------------- */
 .nav-container {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  grid-template-rows: auto auto;
-  gap: 5px;
-  align-items: start;
-  margin-bottom: 15px;
+  align-items: center;
+  gap: 10px;
 }
 
-/*----------------- Buttons------------------ */
-#prev-btn,
-#next-btn {
-  width: 80px;
-  padding: 6px 0;
-  font-size: 0.9em;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-/*--------------- Title in center-------------- */
 #month-year-display {
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
   margin: 0;
   text-align: center;
 }
 
-/*------------- Month dropdown under Prev------- */
-#month-select {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-  width: 120px;
-  padding: 4px 6px;
-  font-size: 1em;
-}
-
-/*-------------Year dropdown under Month --------*/
-#year-select {
-  grid-column: 1 / 2;
-  grid-row: 3 / 4;
-  width: 120px;
-  padding: 4px 6px;
-  font-size: 1em;
-}
-
-/*------------Wrap month/year under previous button---- */
-#month-year-container {
+/* ---------------- SELECTORS ---------------- */
+#selectors {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 #month-select,
 #year-select {
-  min-width: 120px;
   padding: 4px 6px;
   font-size: 1em;
-  text-align: center;
 }
 
 /* ---------------- WEEKDAY LABELS & CALENDAR ---------------- */
@@ -127,8 +70,6 @@ section {
   transition: background-color 0.2s;
   padding: 4px;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .day:hover {
@@ -138,9 +79,7 @@ section {
 .special-day {
   background-color: #ffeeba;
   font-weight: bold;
-  font-size: 0.7em; /* smaller font for long text */
-  white-space: normal; /* allow wrapping */
-  overflow: hidden;
+  font-size: 0.7em;
   text-align: center;
   line-height: 1.1em;
   padding: 2px 4px;
